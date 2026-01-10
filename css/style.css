@@ -1,6 +1,6 @@
-/* =============
-   Global Styles 
-   ============= */
+/* ===============================
+   Global Styles for Your Trustee Website
+   =============================== */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -8,69 +8,109 @@ body {
   color: #222;
 }
 
-h1, h2, h3 {
-  color: #002855;
-  margin-bottom: 10px;
-}
-
+h1, h2, h3 { color: #002855; margin-bottom: 10px; }
 p { line-height: 1.6; }
 
 /* ===============================
-   Header Section
+   Header (Logo + Navigation)
    =============================== */
-.hero {
-  position: relative;
-  background: linear-gradient(135deg, #003a70, #00509e);
+.main-header {
+  background: linear-gradient(90deg, #003a70, #00509e);
   color: #fff;
-  text-align: center;
-  padding: 80px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-
-.hero .logo {
-  width: 130px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.hero h1 { font-size: 28px; margin: 10px 0; }
-.hero p { opacity: 0.9; font-size: 16px; }
-
-/* ===============================
-   Navigation
-   =============================== */
-.navbar {
+.header-container {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  background-color: #002855;
-  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
 }
-
-.navbar a {
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.company-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+.nav-links a {
   color: #fff;
   text-decoration: none;
+  margin-left: 25px;
   font-weight: 500;
   transition: color 0.3s;
 }
-
-.navbar a:hover, .navbar a.active {
+.nav-links a:hover, .nav-links a.active {
   color: #f7c948;
 }
 
 /* ===============================
-   Sections
+   Carousel Banner
+   =============================== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-height: 480px;
+}
+.carousel-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+.carousel-caption h2 { font-size: 28px; margin-bottom: 10px; }
+.carousel-caption p { font-size: 16px; opacity: 0.9; }
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background 0.3s;
+  user-select: none;
+}
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.5); }
+.prev { left: 20px; }
+.next { right: 20px; }
+.fade { animation: fade 1s ease-in-out; }
+@keyframes fade { from {opacity: .4;} to {opacity: 1;} }
+
+/* ===============================
+   Sections and Cards
    =============================== */
 section { padding: 60px 10%; text-align: center; }
-
 section.light-bg { background-color: #eef4fb; }
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
-
 .card {
   background: #fff;
   padding: 25px;
@@ -78,124 +118,43 @@ section.light-bg { background-color: #eef4fb; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
-
-.card i {
-  font-size: 35px;
-  color: #00509e;
-  margin-bottom: 15px;
-}
+.card i { font-size: 35px; color: #00509e; margin-bottom: 15px; }
 
 /* ===============================
-   Timeline (Recruitment Process)
+   Contact Page Styling (No Form)
    =============================== */
-.timeline {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.step {
-  background: #fff;
-  border-left: 4px solid #00509e;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.step span {
-  background-color: #00509e;
-  color: #fff;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* ===============================
-   About Page
-   =============================== */
-.about-section {
-  text-align: left;
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.about-section h2 { text-align: center; margin-bottom: 20px; }
-
-.about-values {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.about-values .value {
-  flex: 1 1 200px;
-  background-color: #eef4fb;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* ===============================
-   Contact Page
-   =============================== */
-.contact {
+.contact-page {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
-  max-width: 900px;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
   margin: auto;
 }
-
-.contact-info, .contact-form {
-  flex: 1 1 400px;
+.contact-info {
+  flex: 1 1 450px;
   background: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
 }
-
-.contact-info h3 { margin-bottom: 15px; color: #003a70; }
+.contact-info h3 { color: #003a70; margin-bottom: 15px; }
 .contact-info p { margin-bottom: 10px; }
-
-.contact-form input, .contact-form textarea {
+.contact-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.contact-image img {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact-form button {
-  background-color: #003a70;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #00509e;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 /* ===============================
@@ -207,6 +166,44 @@ footer {
   text-align: center;
   padding: 40px 10px;
 }
-
 footer p, footer small { margin: 5px 0; }
-footer .disclaimer { font-size: 12px; opacity: 0.8; margin-top: 10px; }
+footer .disclaimer {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* ===============================
+   Responsive Adjustments
+   =============================== */
+@media (max-width: 768px) {
+  .header-container { flex-direction: column; gap: 10px; }
+  .nav-links { display: flex; flex-wrap: wrap; justify-content: center; }
+  .carousel-caption h2 { font-size: 22px; }
+  .carousel-caption p { font-size: 14px; }
+}
+
+
+/* Disclaimer banner */
+.disclaimer-banner {
+  background: linear-gradient(90deg, #f7c948, #ffde73);
+  color: #002855;
+  font-weight: 500;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 8px 0;
+  border-bottom: 2px solid #003a70;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scrollText 25s linear infinite;
+  padding-left: 100%;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
