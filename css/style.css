@@ -38,10 +38,22 @@ p { line-height: 1.6; }
   height: 55px;
   border-radius: 50%;
 }
+.company-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
 .company-name {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+}
+
+.company-meta small {
+  font-size: 12px;
+  color: #dce6f2;
+  opacity: 0.9;
 }
 .nav-links a {
   color: #fff;
