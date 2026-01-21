@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.yourtrusteemanpowerconsultants.com/sitemap.xml
+Sitemap: https://www.yourtrusteemanpower.com/sitemap.xml
