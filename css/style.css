@@ -185,6 +185,11 @@ footer .disclaimer {
   margin-top: 10px;
 }
 
+@media (max-width: 375px) {
+	footer {
+		font-size: 0.8em;
+	}
+}
 /* ===============================
    Responsive Adjustments
    =============================== */
