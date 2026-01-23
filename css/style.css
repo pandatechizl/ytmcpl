@@ -185,7 +185,7 @@ footer .disclaimer {
   margin-top: 10px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
 	footer {
 		font-size: 0.8em;
 	}
