@@ -119,7 +119,7 @@ section { padding: 60px 10%; text-align: center; }
 section.light-bg { background-color: #eef4fb; }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
@@ -224,3 +224,61 @@ footer .disclaimer {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+.domestic {
+	background-image: url('https://www.yourtrusteemanpower.com/assets/images/domestic_worker.webp');
+	background-size: 340px;
+}
+
+.fnb {
+	background-image: url('https://www.yourtrusteemanpower.com/assets/images/f&b.webp');
+	background-size: 340px;
+}
+
+.cleaning {
+	background-image: url('https://www.yourtrusteemanpower.com/assets/images/cleaning.webp');
+	background-size: 340px;
+}
+
+.construction {
+	background-image: url('https://www.yourtrusteemanpower.com/assets/images/construction.webp');
+	background-size: 340px;
+}
+
+.hospitality {
+	background-image: url('https://www.yourtrusteemanpower.com/assets/images/hospitality.webp');
+	background-size: 340px;
+}
+
+.admin {
+	background-image: url('https://www.yourtrusteemanpower.com/assets/images/admin.webp');
+	background-size: 340px;
+}
+
+/* Dark overlay for better text readability */
+.industries .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)); 
+    z-index: 1;
+}
+
+/* Ensure text is above the overlay */
+.industries .card * {
+    position: relative;
+    z-index: 2;
+    color: #ffffff; 
+/*     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+}
+
+
+.industries .card::before {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    border-radius:8px;
+}
+
+
