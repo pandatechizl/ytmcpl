@@ -276,6 +276,12 @@ footer .disclaimer {
 }
 
 
+/* Hover effect for industries */
+.industries .card {
+    transform: translateY(-0px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 .industries .card::before {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
     border-radius:8px;
